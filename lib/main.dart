@@ -18,6 +18,9 @@ class _TodaysState extends State<Todays> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: Dashboard.id,
+      routes: {
+        Dashboard.id: (context) => Dashboard(),
+      },
     );
   }
 }
