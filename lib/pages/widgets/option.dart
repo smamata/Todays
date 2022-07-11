@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todays/constant/color_manager.dart';
+import 'package:todays/constant/font_manager.dart';
 import 'package:todays/constant/value_manager.dart';
 
 class Option extends StatefulWidget {
@@ -17,11 +19,22 @@ class _OptionState extends State<Option> {
     return Padding(
         padding: const EdgeInsets.only(right: 10.0),
         child: Container(
-          height: 300,
-          width: 220,
+          height: 250,
+          width: 180,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: ColorManager.lightColor,
             borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 15.0,
+                spreadRadius: 3.0,
+                offset: Offset(
+                  10.0,
+                  10.0,
+                ),
+              )
+            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -29,7 +42,7 @@ class _OptionState extends State<Option> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: SizedBox(
-                  height: 200,
+                  height: 170,
                   width: 200,
                   child: Image.asset(
                     widget.image,
@@ -37,17 +50,19 @@ class _OptionState extends State<Option> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
               Container(
-                height: 20,
+                height: 30,
                 width: 150,
                 decoration: const BoxDecoration(
                   color: Color(0xff65c4fe),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
-                child: Text(widget.title),
+                child: Text(widget.title,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontFamily: "Montserrat-Regular.ttf",
+                        color: Colors.white,
+                        fontSize: FontSizeManager.s20)),
               )
             ],
           ),
