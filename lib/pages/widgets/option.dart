@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todays/constant/color_manager.dart';
 import 'package:todays/constant/font_manager.dart';
-import 'package:todays/constant/value_manager.dart';
 
 class Option extends StatefulWidget {
   final String title;

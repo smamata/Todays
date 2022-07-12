@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todays/pages/weather_page.dart';
 import 'package:todays/pages/widgets/option.dart';
 
 class Dashboard extends StatefulWidget {
@@ -25,16 +26,29 @@ class _DashboardState extends State<Dashboard> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Option(image: "images/weather.png", title: "Weather"),
-                  Option(image: "images/quotes.jpeg", title: "Quotes")
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, Weather.id);
+                      },
+                      child: const Option(
+                          image: "images/weather.png", title: "Weather")),
+                  const Option(image: "images/quotes.png", title: "Quotes")
                 ],
               ),
               SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Option(image: "images/joke.png", title: "Jokes"),
-                  Option(image: "images/quotes.jpeg", title: "Quotes")
+                  Option(image: "images/calculator.png", title: "Calculator")
+                ],
+              ),
+              SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Option(image: "images/anime.png", title: "Anime"),
+                  Option(image: "images/quotes.png", title: "Quotes")
                 ],
               ),
               SizedBox(height: 30),
@@ -42,15 +56,7 @@ class _DashboardState extends State<Dashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Option(image: "images/weather.png", title: "Weather"),
-                  Option(image: "images/quotes.jpeg", title: "Quotes")
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Option(image: "images/weather.png", title: "Weather"),
-                  Option(image: "images/quotes.jpeg", title: "Quotes")
+                  Option(image: "images/quotes.png", title: "Quotes")
                 ],
               ),
             ],

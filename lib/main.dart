@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todays/pages/dashboard.dart';
+import 'package:todays/pages/weather_page.dart';
 
 void main() {
   runApp(const Todays());
@@ -20,6 +21,7 @@ class _TodaysState extends State<Todays> {
       initialRoute: Dashboard.id,
       routes: {
         Dashboard.id: (context) => Dashboard(),
+        Weather.id: (context) => Weather(),
       },
     );
   }
