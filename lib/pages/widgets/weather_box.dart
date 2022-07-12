@@ -28,7 +28,7 @@ class _WeatherBoxState extends State<WeatherBox> {
         height: 150,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color: Color(0xff65c4fe),
+          color: const Color(0xff65c4fe),
           borderRadius: BorderRadius.circular(10),
           boxShadow: const [
             BoxShadow(
@@ -49,9 +49,9 @@ class _WeatherBoxState extends State<WeatherBox> {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
-                    "Name:",
+                    "Place :",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: FontSizeManager.s20,
@@ -85,28 +85,28 @@ class _WeatherBoxState extends State<WeatherBox> {
                 children: [
                   Text(
                     widget.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ColorManager.lightColor,
                       fontSize: FontSizeManager.s20,
                     ),
                   ),
                   Text(
                     widget.max,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ColorManager.lightColor,
                       fontSize: FontSizeManager.s20,
                     ),
                   ),
                   Text(
                     widget.min,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ColorManager.lightColor,
                       fontSize: FontSizeManager.s20,
                     ),
                   ),
                   Text(
                     widget.rain,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ColorManager.lightColor,
                       fontSize: FontSizeManager.s20,
                     ),

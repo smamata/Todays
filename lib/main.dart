@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todays/business_logic/bloc/bloc/quotes/bloc/quotes_bloc.dart';
 import 'package:todays/business_logic/bloc/bloc/weather_bloc.dart';
 import 'package:todays/pages/dashboard.dart';
+import 'package:todays/pages/quotes_page.dart';
 import 'package:todays/pages/weather_page.dart';
+import 'package:todays/repo/quotes_repo.dart';
 import 'package:todays/repo/weather_repo.dart';
 
 void main() {
@@ -24,6 +27,9 @@ class _TodaysState extends State<Todays> {
         BlocProvider(
             create: ((context) =>
                 WeatherBloc(RealWeatherRepo())..add(GetWeather()))),
+        BlocProvider(
+            create: ((context) =>
+                QuotesBloc(RealQuotesRepo())..add(GetQuotes()))),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -31,6 +37,7 @@ class _TodaysState extends State<Todays> {
         routes: {
           Dashboard.id: (context) => const Dashboard(),
           Weather.id: (context) => const Weather(),
+          Quotes.id: (context) => const Quotes(),
         },
       ),
     );

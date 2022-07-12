@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todays/pages/quotes_page.dart';
 import 'package:todays/pages/weather_page.dart';
 import 'package:todays/pages/widgets/option.dart';
 
@@ -32,7 +33,12 @@ class _DashboardState extends State<Dashboard> {
                       },
                       child: const Option(
                           image: "images/weather.png", title: "Weather")),
-                  const Option(image: "images/quotes.png", title: "Quotes")
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, Quotes.id);
+                      },
+                      child: const Option(
+                          image: "images/quotes.png", title: "Quotes"))
                 ],
               ),
               SizedBox(height: 30),

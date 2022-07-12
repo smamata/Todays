@@ -37,7 +37,7 @@ class _WeatherState extends State<Weather> {
                         rain: data.rain);
                   });
             } else {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             }
           },
         ));

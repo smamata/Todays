@@ -2,6 +2,8 @@ import 'package:flutter/widgets.dart';
 
 class FontConstant {
   static const String fontfamily = "Montserrat";
+  static const String f1 = "Montserrat-ExtraBold";
+  static const String f2 = "Montserrat-Bold";
 }
 
 class FontWeightManager {
