@@ -18,7 +18,7 @@ class _QuotesBoxState extends State<QuotesBox> {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Container(
-        height: 200,
+        height: 250,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: const Color(0xff65c4fe),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todays/business_logic/bloc/bloc/quotes/bloc/quotes_bloc.dart';
 import 'package:todays/business_logic/bloc/bloc/weather_bloc.dart';
+import 'package:todays/constant/theme_manager.dart';
 import 'package:todays/pages/dashboard.dart';
 import 'package:todays/pages/quotes_page.dart';
 import 'package:todays/pages/weather_page.dart';

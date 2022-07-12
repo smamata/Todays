@@ -13,7 +13,7 @@ class QuotesBloc extends Bloc<QuotesEvent, QuotesState> {
       emit(QuotesLoading());
       try {
         final response = await _quotesRepo.fetchQuotes();
-        if (response.quotes!.isEmpty) {
+        if (response.quotes != null) {
           emit(QuotesLoaded(response));
         } else {
           emit(QuotesFailed("Failed"));
