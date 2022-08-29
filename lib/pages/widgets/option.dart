@@ -18,7 +18,7 @@ class _OptionState extends State<Option> {
     return Padding(
         padding: const EdgeInsets.only(right: 10.0),
         child: Container(
-          height: 250,
+          height: 200,
           width: 180,
           decoration: BoxDecoration(
             color: ColorManager.lightColor,
@@ -38,14 +38,13 @@ class _OptionState extends State<Option> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: SizedBox(
-                  height: 170,
-                  width: 200,
-                  child: Image.asset(
+              CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.black12,
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage(
                     widget.image,
-                    fit: BoxFit.cover,
                   ),
                 ),
               ),

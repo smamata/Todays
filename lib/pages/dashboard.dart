@@ -12,6 +12,13 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +53,7 @@ class _DashboardState extends State<Dashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Option(image: "images/joke.png", title: "Jokes"),
-                  Option(image: "images/calculator.png", title: "Calculator")
+                  Option(image: "images/bmi.png", title: "BMI Calculator")
                 ],
               ),
               SizedBox(height: 30),
@@ -54,7 +61,7 @@ class _DashboardState extends State<Dashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Option(image: "images/anime.png", title: "Anime"),
-                  Option(image: "images/quotes.png", title: "Quotes")
+                  Option(image: "images/calculator.png", title: "Quotes")
                 ],
               ),
               SizedBox(height: 30),
@@ -68,6 +75,26 @@ class _DashboardState extends State<Dashboard> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xff65c4fe),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Color.fromARGB(255, 17, 71, 104),
+        onTap: _onItemTapped,
       ),
     );
   }
